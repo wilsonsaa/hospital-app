@@ -1,80 +1,78 @@
-// Base de datos estática extraída de la matriz oficial de Mosquera
 export const territoriosData = {
-    "Occidental 1": {
-        "Occidental 1a": ["La Cumbre II"],
-        "Occidental 1b": ["El Dorado"],
-        "Occidental 1c": ["Altos Santa Ana"]
-    },
-    "Occidental 2": {
-        "Occidental 2a": ["La Cumbre"],
-        "Occidental 2b": ["Santa Ana"],
-        "Occidental 2c": ["Urb. Villa del Rocio"]
-    },
-    "Occidental 3": {
-        "Occidental 3a": ["Urb. San Sebastian"],
-        "Occidental 3b": ["Urb. San Telmo"],
-        "Occidental 3c": ["Villa Marcela"]
-    },
-    "Occidental 4": {
-        "Occidental 4a": ["Urb. Altos de San Juan"],
-        "Occidental 4b": ["Urb. Villa Sajonia"]
-    },
-    "Occidental 5": {
-        "Occidental 5a": ["Urb. Villa Maria IV"],
-        "Occidental 5b": ["Urb. El Jardín"],
-        "Occidental 5c": ["Campiñas de San Gabriel"]
-    },
-    "Occidental 6": {
-        "Occidental 6a": ["Urb. El Paraiso"],
-        "Occidental 6b": ["Urb. La Arboleda"],
-        "Occidental 6c": ["Torres de San Felipe"]
-    },
-    "Occidental 7": {
-        "Occidental 7a": ["Urb. Praderas II"],
-        "Occidental 7b": ["Urb. Nueva Castilla"]
-    },
-    "Occidental 8": {
-        "Occidental 8a": ["Urb. Praderas"],
-        "Occidental 8b": ["Urb. El Remanso"]
-    },
     "Oriental 1": {
-        "Oriental 1a": ["PorvenirRio2Sector"],
-        "Oriental 1b": ["Porvenir río"],
-        "Oriental 1c": ["Conjunto parques de porvenir"]
+        "Oriental 1 A": ["Porvenir Sector 2"],
+        "Oriental 1 B": ["Porvenir rio "],
+        "Oriental 1 C": ["Conjunto parques de porvenir"]
     },
     "Oriental 2": {
-        "Oriental 2a": ["Acanto"],
-        "Oriental 2b": ["Villa Lady"],
-        "Oriental 2c": ["PorvenirRio1Sector"]
+        "Oriental 2 A": ["Acanto"],
+        "Oriental 2 B": ["Villa Lady"],
+        "Oriental 2 C": ["Porvenir rio 1 Sector"]
     },
     "Oriental 3": {
-        "Oriental 3a": ["Sabana"],
-        "Oriental 3b": ["Urb. Area 65"],
-        "Oriental 3c": ["Planadas I Sector"]
+        "Oriental 3 A": ["Sabana"],
+        "Oriental 3 B": ["Urb. Area 65 - acanto 2"],
+        "Oriental 3 C": ["Planadas sector 1"]
     },
     "Oriental 4": {
-        "Oriental 4a": ["Portal del Cerrito"],
-        "Oriental 4b": ["Casco Urbano Oriental"],
-        "Oriental 4c": ["Planadas II Sector"]
+        "Oriental 4 A": ["Managua"],
+        "Oriental 4 B": ["Planada sector 2"],
+        "Oriental 4 C": ["Portal del cerrito "]
     },
     "Oriental 5": {
-        "Oriental 5a": ["Andria"],
-        "Oriental 5b": ["Managua"],
-        "Oriental 5c": ["El Lucero"]
+        "Oriental 5 A": ["Andria"],
+        "Oriental 5 B": ["El Lucero "]
     },
     "Oriental 6": {
-        "Oriental 6a": ["Villa Cety"],
-        "Oriental 6b": ["Camelias del Diamante"],
-        "Oriental 6c": ["DiamanteOccidental"]
+        "Oriental 6 A": ["Villa Cety"],
+        "Oriental 6 B": ["Carmelitas del diamante"],
+        "Oriental 6 C": ["Diamante Occidental "]
+    },
+    "Occidental 1": {
+        "Occidental 1 A": ["La cumbre II"],
+        "Occidental 1 B": ["El dorado"],
+        "Occidental 1 C": ["Urb. Villa del Rocio"]
+    },
+    "Occidental 2": {
+        "Occidental 2 A": ["La Cumbre"],
+        "Occidental 2 B": ["Santa Ana"],
+        "Occidental 2 C": ["Altos de santa ana"]
+    },
+    "Occidental 3": {
+        "Occidental 3 A": ["Urb. San Sebastian"],
+        "Occidental 3 B": ["Urb. San Telmo"],
+        "Occidental 3 C": ["Villa Marcela"]
+    },
+    "Occidental 4": {
+        "Occidental 4 A": ["Urb. Altos de San Juan"],
+        "Occidental 4 B": ["Urb. Villa Sajonia"]
+    },
+    "Occidental 5": {
+        "Occidental 5 A": ["Urb. Villa Maria IV"],
+        "Occidental 5 B": ["Urb. El Jardín"],
+        "Occidental 5 C": ["Campiñas de San Gabriel"]
+    },
+    "Occidental 6": {
+        "Occidental 6 A": ["Urb. El Paraiso"],
+        "Occidental 6 B": ["Urb. La Arboleda"],
+        "Occidental 6 C": ["Torres de San Felipe"]
+    },
+    "Occidental 7": {
+        "Occidental 7 A": ["Urb.Praderas II"],
+        "Occidental 7 B": ["Urb. Nueva Castilla"]
+    },
+    "Occidental 8": {
+        "Occidental 8 A": ["Urb. Praderas"],
+        "Occidental 8 B": ["Urb. El Remanso"]
     },
     "Rural 1": {
-        "Rural 1a": ["El pencal"],
-        "Rural 1b": ["El playon"],
-        "Rural 1c": ["Parcelas"]
+        "Rural 1 A": ["El pencal"],
+        "Rural 1 B": ["El playon"],
+        "Rural 1 C": ["Parcelas"]
     },
     "Rural 2": {
-        "Rural 2a": ["Los puentes"],
-        "Rural 2b": ["El charquito II"],
-        "Rural 2c": ["El charquito"]
+        "Rural 2 A": ["Los puentes"],
+        "Rural 2 B": ["El charquito II"],
+        "Rural 2 C": ["El charquito"]
     }
 };
