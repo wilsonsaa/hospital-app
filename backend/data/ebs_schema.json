@@ -1,0 +1,10 @@
+{
+    "titulo": "Módulo EBS - Equipos Básicos",
+    "campos": [
+        {
+            "id": "paciente",
+            "label": "Nombre del Paciente",
+            "tipo": "text"
+        }
+    ]
+}

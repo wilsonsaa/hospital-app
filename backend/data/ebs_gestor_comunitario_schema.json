@@ -1,0 +1,1761 @@
+{
+    "titulo": "🗺️ Ficha Técnica Integral (Cartografía) - Gestor Comunitario",
+    "campos": [
+        {
+            "id": "sec_1",
+            "label": "📁 1. Identificación Administrativa",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "documento_profesional",
+            "label": "🪪 Documento del Gestor",
+            "tipo": "search_doc",
+            "requerido": true
+        },
+        {
+            "id": "nombre_profesional",
+            "label": "👤 Nombre del Gestor",
+            "tipo": "text_auto",
+            "requerido": true
+        },
+        {
+            "id": "numero_gestor",
+            "label": "🔢 Número del gestor (1-16)",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "selector_territorio",
+            "label": "🧭 Selección de Territorio y Barrio",
+            "tipo": "selector_territorio",
+            "requerido": true
+        },
+        {
+            "id": "tipologia_territorio",
+            "label": "🏙️ Tipología",
+            "tipo": "select",
+            "opciones": [
+                "Urbano",
+                "Rural"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "fecha_recoleccion",
+            "label": "📅 Fecha de recolección de datos",
+            "tipo": "date",
+            "requerido": true
+        },
+        {
+            "id": "lugar_reunion",
+            "label": "📍 Lugar de reunión",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "foto_panoramica",
+            "label": "📸 Fotografía Panorámica del Microterritorio",
+            "tipo": "foto",
+            "requerido": true
+        },
+        {
+            "id": "mapa_puntos_riesgo",
+            "label": "🗺️ Cartografía: Marque el polígono y los puntos de riesgo",
+            "tipo": "mapa_interactivo",
+            "requerido": true
+        },
+        {
+            "id": "disciplinas_participantes",
+            "label": "👥 Disciplinas participantes (Ej: Gestor, Auxiliar)",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "coordenadas_oficiales",
+            "label": "🛰️ Georreferenciación Base (GPS)",
+            "tipo": "gps",
+            "requerido": true
+        },
+        {
+            "id": "sec_2",
+            "label": "🤝 2. Contacto Comunitario",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "nombre_jac",
+            "label": "🗣️ Nombre del presidente(a) JAC",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "contacto_jac",
+            "label": "📱 Número de contacto JAC",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "correo_jac",
+            "label": "📧 Correo electrónico JAC",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "direccion_jac",
+            "label": "🏠 Dirección JAC",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "otro_contacto_nombre",
+            "label": "👤 Otro contacto relevante - Nombre",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "otro_contacto_cargo",
+            "label": "💼 Otro contacto relevante - Cargo",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "otro_contacto_tel",
+            "label": "📞 Otro contacto relevante - Teléfono (o 0)",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "sec_3",
+            "label": "📢 3. Participación y Aseguramiento",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "participacion_activa",
+            "label": "🙋 Participación comunitaria activa",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "preocupacion_principal",
+            "label": "⚠️ ¿Cuál es la principal preocupación en salud manifestada?",
+            "tipo": "textarea",
+            "descripcion": "Detalle la situación o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "sec_4",
+            "label": "🛡️ 4. Factores Protectores",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "prot_liderazgo",
+            "label": "🌟 Liderazgo comunitario fuerte",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_redes",
+            "label": "🕸️ Redes organizadas activas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_participacion",
+            "label": "🤝 Alta participación comunitaria",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_espacios",
+            "label": "⚽ Espacios recreativos activos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_programas",
+            "label": "📋 Programas sociales vigentes",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_conflictividad",
+            "label": "🕊️ Bajo nivel de conflictividad",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_articulacion",
+            "label": "🏢 Articulación institucional activa",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prot_org_sociales",
+            "label": "🏛️ Presencia de organizaciones sociales consolidadas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_5",
+            "label": "📊 5. Caracterización General",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "num_familias",
+            "label": "👨‍👩‍👧‍👦 Nº estimado de familias",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "num_casas",
+            "label": "🏡 Nº estimado de casas",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "num_habitantes",
+            "label": "👥 Nº estimado de habitantes",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "pob_predominante",
+            "label": "👶👴 Población predominante",
+            "tipo": "text",
+            "descripcion": "Ej: Primera infancia, Adulto mayor. Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "sec_6_13",
+            "label": "🌈 6 y 13. Caracterización Poblacional Diferencial",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "dif_migrante",
+            "label": "🎒 Presencia de población migrante",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No",
+                "Desconoce"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_migrante_reg",
+            "label": "🛂 Migrante regular",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No",
+                "Desconoce"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_migrante_irreg",
+            "label": "🚶 Migrante irregular",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No",
+                "Desconoce"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_adulto_solo",
+            "label": "👵 Adulto mayor solo",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_discapacidad",
+            "label": "🦽 Presencia de discapacidad",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_flotante",
+            "label": "🌊 Población flotante",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "dif_indigena",
+            "label": "🪶 Población indígena (Etnia)",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "dif_lgtbiq",
+            "label": "🏳️‍🌈 Población LGTBIQ+",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_7",
+            "label": "🏘️ 7. Caracterización Social",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "limites_terr",
+            "label": "🚧 Límites del microterritorio",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "tipo_vivienda",
+            "label": "🏢 Tipo de vivienda predominante",
+            "tipo": "select",
+            "opciones": [
+                "Casa",
+                "Apartamento",
+                "Conjunto cerrado",
+                "Lote privado",
+                "Lote público",
+                "Zona rural / cultivos",
+                "Otro"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "tenencia_vivienda",
+            "label": "🔑 Tenencia de vivienda predominante",
+            "tipo": "select",
+            "opciones": [
+                "Propia",
+                "En arriendo",
+                "Invasión",
+                "Mixta"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "estrato",
+            "label": "🪙 Estrato",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "Sin estrato"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "ocupacion_predom",
+            "label": "💼 Ocupación predominante",
+            "tipo": "select",
+            "opciones": [
+                "Empleo formal",
+                "Empleo informal",
+                "Agrícola",
+                "Comerciante",
+                "Pensionado",
+                "Mixta"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "locales_comerciales",
+            "label": "🏪 ¿Existen locales comerciales?",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "industrias",
+            "label": "🏭 ¿Existen industrias/empresas?",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "sec_8",
+            "label": "🏥 8. Servicios e Instituciones Disponibles",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "serv_salud_pub",
+            "label": "🩺 Centro de salud público",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_salud_priv",
+            "label": "⚕️ Centro de salud privado",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_colegios",
+            "label": "🏫 Colegios Públicos/Privados",
+            "tipo": "text",
+            "descripcion": "Nombres o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_jardines",
+            "label": "🛝 Jardines infantiles",
+            "tipo": "text",
+            "descripcion": "Nombres o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_hogares_com",
+            "label": "🧸 Hogares comunitarios",
+            "tipo": "text",
+            "descripcion": "Nombres o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_universidades",
+            "label": "🎓 Universidades",
+            "tipo": "text",
+            "descripcion": "Nombres o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_bomberos",
+            "label": "🚒 Bomberos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_policia",
+            "label": "🚓 Policía (CAI)",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_fundaciones",
+            "label": "🤝 Fundaciones",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_planta_elec",
+            "label": "⚡ Planta eléctrica",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_planta_acueducto",
+            "label": "🚰 Planta de acueducto",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_alcaldia",
+            "label": "🏛️ Alcaldía / Secretarías",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_comisaria",
+            "label": "⚖️ Comisaría de Familia",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_fiscalia",
+            "label": "🔎 Fiscalía",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_personeria",
+            "label": "⚖️ Personería",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_geriátricos",
+            "label": "👴 Hogares geriátricos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_hogares_paso",
+            "label": "🛏️ Hogares de paso",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "serv_equipamientos",
+            "label": "🏀 Equipamientos (Parques, Canchas)",
+            "tipo": "text",
+            "descripcion": "Nombres o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_establecimientos",
+            "label": "🍞 Establecimientos (Tiendas, Droguerías)",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "serv_religioso",
+            "label": "⛪ Organizaciones religiosas",
+            "tipo": "text",
+            "descripcion": "Tipos y cantidad o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "sec_9",
+            "label": "🚧 9. Problemáticas del Microterritorio",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "prob_inseguridad",
+            "label": "🥷 Inseguridad",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_residuos",
+            "label": "🗑️ Mala disposición residuos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_alumbrado",
+            "label": "💡 Deficiencia alumbrado público",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_acc_salud",
+            "label": "🏥 Dificultad acceso salud",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_transporte",
+            "label": "🚌 Acceso transporte limitado",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_movilidad",
+            "label": "🛑 Barreras movilidad",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_agua",
+            "label": "🚱 Problemas agua potable",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_alcantarillado",
+            "label": "🕳️ Problemas alcantarillado",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_spa",
+            "label": "🚬 Consumo SPA visible",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "prob_embarazo_adol",
+            "label": "🤰 Embarazo adolescente frecuente",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_10",
+            "label": "🌍 10. Determinantes Ambientales",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "det_inundacion",
+            "label": "🌊 Inundaciones",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_cont_aire",
+            "label": "💨 Contaminación aire",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_cont_ruido",
+            "label": "🔊 Contaminación ruido",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_aguas_resid",
+            "label": "☢️ Aguas residuales",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_riesgo_estruc",
+            "label": "🏚️ Riesgo estructural",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_deslizamientos",
+            "label": "⛰️ Deslizamientos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_rios",
+            "label": "🏞️ Presencia de ríos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_quebradas",
+            "label": "🏞️ Presencia de quebradas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_lagunas",
+            "label": "💧 Presencia de lagunas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_humedales",
+            "label": "🌿 Presencia de humedales",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "det_calles_pav",
+            "label": "🛣️ Calles pavimentadas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_11_12",
+            "label": "🚨 11 y 12. Seguridad y Educación",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "seg_percepcion",
+            "label": "👀 Percepción de inseguridad",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "seg_calles_pelig",
+            "label": "🚧 Calles peligrosas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "seg_pandillismo",
+            "label": "💥 Pandillismo",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "seg_microtrafico",
+            "label": "💊 Microtráfico",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "seg_falta_espacios",
+            "label": "🚫 Falta de espacios recreativos seguros",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "seg_horarios",
+            "label": "🕒 Horarios críticos",
+            "tipo": "text",
+            "descripcion": "Franja horaria o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "seg_punto_critico",
+            "label": "🎯 Puntos críticos",
+            "tipo": "textarea",
+            "descripcion": "Tipo, Dirección, Nivel o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "edu_barreras",
+            "label": "🎒 ¿Barreras para acceder a educación?",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "sec_14",
+            "label": "🦠 14. Condiciones Sanitarias",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "san_vectores",
+            "label": "🦟 Presencia vectores",
+            "tipo": "text",
+            "descripcion": "Cuáles o escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "san_mascotas",
+            "label": "🐕 Tenencia inadecuada mascotas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_hab_calle",
+            "label": "⛺ Habitabilidad en calle",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_residuos",
+            "label": "🚮 Disposición inadecuada residuos",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_escombros",
+            "label": "🏗️ Acumulación basureros/escombros",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_hacinamiento",
+            "label": "👨‍👩‍👧‍👦 Hacinamiento en viviendas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_excretas",
+            "label": "💩 Disposición inadecuada de excretas",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_sin_alcan",
+            "label": "🕳️ Viviendas sin conexión a alcantarillado",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "san_pozo_septico",
+            "label": "🪣 Uso de pozo séptico en mal estado",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_15",
+            "label": "📉 15. Matriz: Vulnerabilidad Socioambiental",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "vul_inundaciones_pre",
+            "label": "🌊 Inundaciones: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_inundaciones_prob",
+            "label": "🎲 Inundaciones: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_inundaciones_imp",
+            "label": "💥 Inundaciones: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_contaminacion_pre",
+            "label": "🏭 Contaminación ambiental: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_contaminacion_prob",
+            "label": "🎲 Contaminación: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_contaminacion_imp",
+            "label": "💥 Contaminación: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_riesgoest_pre",
+            "label": "🏚️ Riesgo estructural en viviendas: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_riesgoest_prob",
+            "label": "🎲 Riesgo estructural: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_riesgoest_imp",
+            "label": "💥 Riesgo estructural: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_hacinamiento_pre",
+            "label": "👨‍👩‍👧‍👦 Hacinamiento: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_hacinamiento_prob",
+            "label": "🎲 Hacinamiento: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_hacinamiento_imp",
+            "label": "💥 Hacinamiento: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_agua_pre",
+            "label": "🚱 Falta agua potable: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_agua_prob",
+            "label": "🎲 Falta agua: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_agua_imp",
+            "label": "💥 Falta agua: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_alcantarillado_pre",
+            "label": "🕳️ Problemas de alcantarillado: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_alcantarillado_prob",
+            "label": "🎲 Problemas alcantarillado: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_alcantarillado_imp",
+            "label": "💥 Problemas alcantarillado: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_vectores_pre",
+            "label": "🦟 Presencia de vectores: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_vectores_prob",
+            "label": "🎲 Vectores: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_vectores_imp",
+            "label": "💥 Vectores: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_zonas_inseg_pre",
+            "label": "🚨 Zonas de inseguridad: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_zonas_inseg_prob",
+            "label": "🎲 Zonas de inseguridad: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_zonas_inseg_imp",
+            "label": "💥 Zonas de inseguridad: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_trabajo_infantil_pre",
+            "label": "👶 Trabajo infantil: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_trabajo_infantil_prob",
+            "label": "🎲 Trabajo infantil: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "vul_trabajo_infantil_imp",
+            "label": "💥 Trabajo infantil: Impacto (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_16",
+            "label": "💔 16. Matriz: Riesgo Social y Exclusión",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "rs_no_afiliacion_pre",
+            "label": "🏥 No afiliación salud: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_no_afiliacion_prob",
+            "label": "🎲 No afiliación: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_pobreza_pre",
+            "label": "🪙 Pobreza extrema: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_pobreza_prob",
+            "label": "🎲 Pobreza extrema: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_violencia_pre",
+            "label": "🤜 Violencia intrafamiliar: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_violencia_prob",
+            "label": "🎲 Violencia intrafamiliar: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_violencia_genero_pre",
+            "label": "👩 Violencia basada en género: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_violencia_genero_prob",
+            "label": "🎲 Violencia género: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_spa_pre",
+            "label": "🚬 Consumo de SPA: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_spa_prob",
+            "label": "🎲 Consumo SPA: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_desercion_pre",
+            "label": "🎒 Deserción escolar: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_desercion_prob",
+            "label": "🎲 Deserción escolar: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_migracion_pre",
+            "label": "🚶 Migración sin acceso a servicios: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_migracion_prob",
+            "label": "🎲 Migración sin acceso: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_adulto_solo_pre",
+            "label": "👵 Adulto mayor solo: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_adulto_solo_prob",
+            "label": "🎲 Adulto mayor solo: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_conflictos_pre",
+            "label": "⚔️ Conflictos comunitarios frecuentes: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_baja_part_pre",
+            "label": "📉 Baja participación comunitaria: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "rs_redes_org_pre",
+            "label": "🕸️ Redes comunitarias organizadas: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_17",
+            "label": "🏥 17. Matriz: Acceso a Servicios",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "acc_barreras_pre",
+            "label": "🗓️ Barreras para citas médicas: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_barreras_prob",
+            "label": "🎲 Barreras citas: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_demoras_aut_pre",
+            "label": "⏳ Demoras en autorizaciones: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_demoras_aut_prob",
+            "label": "🎲 Demoras autorizaciones: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_medicamentos_pre",
+            "label": "💊 Dificultad acceso medicamentos: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_medicamentos_prob",
+            "label": "🎲 Dificultad medicamentos: Probabilidad (1-5)",
+            "tipo": "select",
+            "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "No Aplica"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_ips_lejos_pre",
+            "label": "🚶 IPS no accesible: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_desconocimiento_pre",
+            "label": "🤷 Desconocimiento de rutas: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "acc_barreras_cult_pre",
+            "label": "🗣️ Barreras culturales: ¿Presente?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "sec_21_24",
+            "label": "✅ 21 a 24. Conclusiones y Priorización",
+            "tipo": "titulo_seccion"
+        },
+        {
+            "id": "capacidad_operativa",
+            "label": "💪 ¿Supera la capacidad operativa del equipo?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No",
+                "Parcialmente"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "articulacion_intersectorial",
+            "label": "🤝 ¿Requiere articulación intersectorial?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "intervencion_inmediata",
+            "label": "🚑 ¿Requiere intervención inmediata?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "resumen_analisis",
+            "label": "📝 Conclusión / Resumen del análisis territorial",
+            "tipo": "textarea",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "riesgo_prioritario",
+            "label": "🎯 Riesgo prioritario del territorio",
+            "tipo": "text",
+            "descripcion": "Escriba NA si no aplica.",
+            "requerido": true
+        },
+        {
+            "id": "curso_vida_afectado",
+            "label": "👶👴 Curso de vida más afectado",
+            "tipo": "select",
+            "opciones": [
+                "Primera infancia",
+                "Infancia",
+                "Adolescencia",
+                "Juventud",
+                "Adultez",
+                "Adulto mayor",
+                "Todos"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "clasificacion_final",
+            "label": "🚦 Clasificación Final del Territorio",
+            "tipo": "select",
+            "opciones": [
+                "Bajo",
+                "Medio",
+                "Alto",
+                "Crítico"
+            ],
+            "requerido": true
+        }
+    ]
+}

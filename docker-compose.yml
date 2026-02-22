@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hospital-app:
+    build: .
+    container_name: hospital-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      # Esto crea el volumen en la misma carpeta donde pongas el proyecto en OCI
+      - ./backend/db_data:/app/backend/db_data

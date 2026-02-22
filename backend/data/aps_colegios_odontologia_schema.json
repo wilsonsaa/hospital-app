@@ -1,0 +1,33 @@
+{
+    "titulo": "Atención Odontológica Escolar - APS",
+    "campos": [
+        {
+            "id": "paciente",
+            "label": "Nombre del Estudiante",
+            "tipo": "text",
+            "requerido": true
+        },
+        {
+            "id": "grado",
+            "label": "Grado Escolar",
+            "tipo": "text",
+            "requerido": true
+        },
+        {
+            "id": "fluor",
+            "label": "¿Se aplicó flúor?",
+            "tipo": "select",
+            "opciones": [
+                "Sí",
+                "No"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "observaciones",
+            "label": "Observaciones Clínicas",
+            "tipo": "textarea",
+            "requerido": false
+        }
+    ]
+}

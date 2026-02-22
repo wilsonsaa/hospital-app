@@ -1,0 +1,17 @@
+# Dependencias de Node
+frontend/node_modules/
+frontend/dist/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Base de datos local (¡CRÍTICO NO SUBIR ESTO!)
+backend/db_data/
+*.db
+*.sqlite3
+
+# Variables de entorno y SO
+.env
+.DS_Store

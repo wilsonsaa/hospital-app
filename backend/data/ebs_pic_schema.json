@@ -1,0 +1,35 @@
+{
+    "titulo": "Ficha Unificada EBS / PIC - Visita Domiciliaria",
+    "version": "1.0",
+    "campos": [
+        {
+            "id": "documento_paciente",
+            "label": "Número de Documento",
+            "tipo": "number",
+            "requerido": true
+        },
+        {
+            "id": "nombre_paciente",
+            "label": "Nombre Completo",
+            "tipo": "text",
+            "requerido": true
+        },
+        {
+            "id": "riesgo_cardiovascular",
+            "label": "¿Presenta Riesgo Cardiovascular? (Hipertensión/Diabetes)",
+            "tipo": "select",
+            "opciones": [
+                "No",
+                "Si - Bajo",
+                "Si - Alto"
+            ],
+            "requerido": true
+        },
+        {
+            "id": "motivo_canalizacion",
+            "label": "Observación para Canalización",
+            "tipo": "textarea",
+            "requerido": false
+        }
+    ]
+}
