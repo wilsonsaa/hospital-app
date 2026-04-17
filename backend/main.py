@@ -7,10 +7,10 @@ import os
 import json
 
 # --- IMPORTACIONES DE BASE DE DATOS ---
-from sqlalchemy import create_engine, Column, String, JSON
+from sqlalchemy import create_engine, Column, String, JSON, Integer
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-app = FastAPI(title="Hospital Maria Auxiliadora API")
+app = FastAPI(title="Hospital Maria Auxiliadora API - Sincronizacion APS")
 
 app.add_middleware(
     CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
@@ -19,13 +19,10 @@ app.add_middleware(
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # ==========================================
-# CONFIGURACIÓN DE BASE DE DATOS BLINDADA
+# CONFIGURACIÓN DE BASE DE DATOS
 # ==========================================
-# Creamos la carpeta db_data asegurando rutas absolutas
 db_folder = os.path.join(base_dir, 'db_data')
 os.makedirs(db_folder, exist_ok=True)
-
-# Ruta absoluta al archivo SQLite
 db_path = os.path.join(db_folder, 'hospital_datos.db')
 SQLALCHEMY_DATABASE_URL = f"sqlite:///{db_path}"
 
@@ -33,75 +30,93 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-class VisitaDB(Base):
-    __tablename__ = "visitas_campo"
-    uuid = Column(String, primary_key=True, index=True)
-    modulo = Column(String)
-    paciente = Column(String)
-    fecha_registro = Column(String)
-    datos_completos = Column(JSON) 
+# NUEVO MODELO UNIVERSAL: Guarda cualquier tabla que mande Dexie
+class RegistroAPS(Base):
+    __tablename__ = "registros_consolidados_aps"
+    uid = Column(String, primary_key=True, index=True) # Identificador único compuesto
+    tabla_origen = Column(String, index=True) # 'viviendas', 'pacientes', etc.
+    datos = Column(JSON) # El JSON completo del frontend
 
-# Creamos las tablas
 Base.metadata.create_all(bind=engine)
 
 # ==========================================
-# RUTAS DEL API
+# MODELOS DE DATOS (PYDANTIC) PARA RECIBIR
 # ==========================================
-@app.get("/api/health")
-def health_check():
-    return {"status": "ok", "db_path": db_path}
-
-@app.get("/api/forms/{modulo_id}")
-def get_form_structure(modulo_id: str):
-    json_path = os.path.join(base_dir, "data", f"{modulo_id}_schema.json")
-    try:
-        with open(json_path, "r", encoding="utf-8") as f: return json.load(f)
-    except FileNotFoundError:
-        return {"error": True, "mensaje": f"El formulario {modulo_id} aún no está creado en el servidor."}
-
-# --- MODELOS DE DATOS ---
-class VisitaSync(BaseModel):
-    id: Optional[int] = None # Tolerancia para el ID de Dexie
-    uuid: str
-    modulo: str
-    paciente: str
-    fecha: str
-    datos: Dict[str, Any]
-    sincronizado: Optional[int] = 0
-
 class SyncPayload(BaseModel):
-    visitas: List[VisitaSync]
+    viviendas: List[Dict[str, Any]] = []
+    hogares: List[Dict[str, Any]] = []
+    pacientes: List[Dict[str, Any]] = []
+    canalizaciones: List[Dict[str, Any]] = []
+    form_clinico: List[Dict[str, Any]] = []
+    form_psicosocial: List[Dict[str, Any]] = []
 
-# --- ENDPOINT DE SINCRONIZACIÓN ---
+# ==========================================
+# ENDPOINT DE SINCRONIZACIÓN INTELIGENTE
+# ==========================================
 @app.post("/api/sync")
 def sincronizar_datos(payload: SyncPayload):
     try:
         db = SessionLocal()
         agregados = 0
-        duplicados = 0
+        actualizados = 0
         
-        for v in payload.visitas:
-            existe = db.query(VisitaDB).filter(VisitaDB.uuid == v.uuid).first()
-            if not existe:
-                nueva_visita = VisitaDB(
-                    uuid=v.uuid, modulo=v.modulo, paciente=v.paciente,
-                    fecha_registro=v.fecha, datos_completos=v.datos
-                )
-                db.add(nueva_visita)
-                agregados += 1
-            else:
-                duplicados += 1
+        # Convertimos el payload en un diccionario iterable
+        tablas_recibidas = payload.dict()
+        
+        for nombre_tabla, lista_registros in tablas_recibidas.items():
+            for registro in lista_registros:
+                # Buscar el ID real del registro (puede llamarse 'id', 'numero_documento', 'id_atencion'...)
+                registro_id = str(registro.get('id') or registro.get('numero_documento') or registro.get('id_atencion') or registro.get('id_intervencion'))
                 
+                # Creamos un UID único para SQLite: "pacientes_102030" o "hogares_uuid123"
+                uid_compuesto = f"{nombre_tabla}_{registro_id}"
+                
+                existe = db.query(RegistroAPS).filter(RegistroAPS.uid == uid_compuesto).first()
+                
+                if not existe:
+                    nuevo_registro = RegistroAPS(uid=uid_compuesto, tabla_origen=nombre_tabla, datos=registro)
+                    db.add(nuevo_registro)
+                    agregados += 1
+                else:
+                    # Si ya existe, lo actualizamos (Ej: el médico atendió la canalización)
+                    existe.datos = registro
+                    actualizados += 1
+                    
         db.commit()
         db.close()
-        return {"status": "ok", "agregados": agregados, "duplicados_ignorados": duplicados}
+        return {"status": "ok", "agregados": agregados, "actualizados": actualizados}
     except Exception as e:
-        # Esto evitará que la app se caiga en silencio y nos dirá exactamente qué falló
         return {"status": "error", "detalle": str(e)}
-
+# ==========================================
+# ENDPOINT: LECTURA GLOBAL PARA PANELES
+# ==========================================
+@app.get("/api/registros")
+def obtener_registros_nube():
+    try:
+        db = SessionLocal()
+        registros = db.query(RegistroAPS).all()
+        
+        # Agrupamos los datos por tabla
+        datos_consolidados = {
+            "viviendas": [], "hogares": [], "pacientes": [], 
+            "canalizaciones": [], "form_clinico": [], 
+            "form_psicosocial": [], "cartografias": []
+        }
+        
+        for r in registros:
+            if r.tabla_origen in datos_consolidados:
+                datos_consolidados[r.tabla_origen].append(r.datos)
+                
+        db.close()
+        return {"status": "ok", "data": datos_consolidados}
+    except Exception as e:
+        return {"status": "error", "detalle": str(e)}
 # ==========================================
 # SERVIR FRONTEND
 # ==========================================
 frontend_dist_path = os.path.normpath(os.path.join(base_dir, "../frontend/dist"))
 if os.path.exists(frontend_dist_path):
     app.mount("/", StaticFiles(directory=frontend_dist_path, html=True), name="static")
+
+@app.get("/api/health")
+def health_check(): return {"status": "ok"}
