@@ -1,0 +1,53 @@
+# Dependencias de Node
+frontend/node_modules/
+frontend/dist/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Base de datos local (¡CRÍTICO NO SUBIR ESTO!)
+backend/db_data/
+*.db
+*.sqlite3
+
+# Variables de entorno y SO
+.env
+.DS_Store
+
+# >>> github-sync: secretos, datos y dependencias fuera de GitHub
+.env
+.env.*
+!.env.example
+!.env.*.example
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+dist/
+build/
+.dart_tool/
+.vs/
+.idea/
+*.log
+desktop.ini
+Thumbs.db
+.DS_Store
+uploads/
+/data/
+/storage/
+/respaldos/
+/datos_produccion/
+db_data/
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+*.sql.gz
+_to_delete/
+*.pem
+*.key
+# <<< github-sync

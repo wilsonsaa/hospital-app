@@ -1,0 +1,20 @@
+services:
+  hospital-app:
+    image: tu_usuario/hospital-app:latest # Reemplaza por el nombre de tu imagen en Docker Hub
+    build: .
+    container_name: hospital-backend
+    restart: always
+    ports:
+      - "5000:5000" # Exponemos el puerto 80 externo hacia el 5000 interno
+    volumes:
+      # Todo lo que el backend guarde en /app/backend/db_data, 
+      # se guardará mágicamente en la carpeta "datos_produccion" de tu servidor Ubuntu.
+      - ./datos_produccion:/app/backend/db_data
+    environment:
+      # VARIABLES DEL SERVIDOR SMTP PARA GOOGLE
+      - SMTP_SERVER=smtp.gmail.com
+      - SMTP_PORT=465
+      # AQUÍ PONES EL CORREO INSTITUCIONAL/OFICIAL
+      - SMTP_USER=convenios@esemariaauxiliadora.gov.co
+      # AQUÍ PONES LA "CONTRASEÑA DE APLICACIÓN" GENERADA EN GOOGLE
+      - SMTP_PASSWORD=quhayhzbpqgcfvvm

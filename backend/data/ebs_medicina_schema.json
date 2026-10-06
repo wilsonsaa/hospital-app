@@ -1,0 +1,28 @@
+{
+    "titulo": "Ficha Médica - Equipos Básicos (EBS)",
+    "campos": [
+        {
+            "id": "paciente",
+            "label": "Nombre del Paciente",
+            "tipo": "text",
+            "requerido": true
+        },
+        {
+            "id": "diagnostico",
+            "label": "Diagnóstico Principal (CIE-10)",
+            "tipo": "text",
+            "requerido": true
+        },
+        {
+            "id": "riesgo",
+            "label": "Nivel de Riesgo Detectado",
+            "tipo": "select",
+            "opciones": [
+                "Bajo",
+                "Medio",
+                "Alto"
+            ],
+            "requerido": true
+        }
+    ]
+}

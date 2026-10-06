@@ -1,0 +1,15 @@
+{
+    "titulo": "Módulo UMO - Unidad Móvil Odontológica",
+    "campos": [
+        {
+            "id": "paciente",
+            "label": "Paciente Odontología",
+            "tipo": "text"
+        },
+        {
+            "id": "procedimiento",
+            "label": "Procedimiento",
+            "tipo": "text"
+        }
+    ]
+}
