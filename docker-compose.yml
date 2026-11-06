@@ -5,7 +5,7 @@ services:
     container_name: hospital-backend
     restart: always
     ports:
-      - "5000:5000" # Exponemos el puerto 80 externo hacia el 5000 interno
+      - "5001:5001" # Exponemos el puerto 80 externo hacia el 5000 interno
     volumes:
       # Todo lo que el backend guarde en /app/backend/db_data, 
       # se guardará mágicamente en la carpeta "datos_produccion" de tu servidor Ubuntu.

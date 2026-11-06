@@ -24,7 +24,7 @@ COPY backend/ ./backend/
 COPY --from=build-frontend /app/frontend/dist ./frontend/dist
 
 # Exponer el puerto 5000
-EXPOSE 5000
+EXPOSE 5001
 
 # Comando para correr la app
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "5001"]
