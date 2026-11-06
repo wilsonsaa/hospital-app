@@ -17,4 +17,4 @@ services:
       # AQUÍ PONES EL CORREO INSTITUCIONAL/OFICIAL
       - SMTP_USER=convenios@esemariaauxiliadora.gov.co
       # AQUÍ PONES LA "CONTRASEÑA DE APLICACIÓN" GENERADA EN GOOGLE
-      - SMTP_PASSWORD=quhayhzbpqgcfvvm
+      - SMTP_PASSWORD=
